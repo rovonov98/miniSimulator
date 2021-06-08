@@ -14,7 +14,7 @@ export default class Trainer {
         }
         this.compareResults = function(result) {
             this.state = 'result'
-            return this.number == result
+            if (this.number == result) this.result = true
         }
     }
 }

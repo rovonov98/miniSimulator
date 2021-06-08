@@ -49,7 +49,7 @@
                 v-if="trainer.state === 'result'"
                 class="result" 
             >
-                {{ this.compare(this.input) ? 'Правильно' : 'Неправильно'}}
+                {{ this.trainer.result ? 'Правильно' : 'Неправильно'}}
             </div>
         </div>
     </div>
@@ -76,7 +76,7 @@ export default {
             this.trainer.start(digit, speed)
         },
         compare(input) {
-            return this.trainer.compareResults(input)
+            this.trainer.compareResults(input)
         },
         addOptions(digitOpt, speedOpt) {
             for (let i = 2; i <= digitOpt; i++) {
